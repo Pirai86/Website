@@ -2,7 +2,9 @@
   #index.css
 \*-----------------------------------*/
 
-
+.color-blue{
+  color: var(--gold-crayola);
+}
 
 
 
@@ -11,7 +13,7 @@
 \*-----------------------------------*/
 :root {
   /* Colors */
-  --gold-crayola: hsl(38, 61%, 73%);
+  --gold-crayola: #079DD9;
   --quick-silver: hsla(0, 0%, 65%, 1);
   --davys-grey: hsla(30, 3%, 34%, 1);
   --smoky-black-1: hsla(40, 12%, 5%, 1);
@@ -20,7 +22,7 @@
   --eerie-black-1: hsla(210, 4%, 9%, 1);
   --eerie-black-2: hsla(210, 4%, 11%, 1);
   --eerie-black-3: hsla(180, 2%, 8%, 1);
-  --eerie-black-4: hsla(0, 0%, 13%, 1);
+  --eerie-black-4: #6fb6d2;
   --white: hsla(0, 0%, 100%, 1);
   --white-alpha-20: hsla(0, 0%, 100%, 0.2);
   --white-alpha-10: hsla(0, 0%, 100%, 0.1);
@@ -322,7 +324,13 @@ body.nav-active {
 .img-cover{
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit:cover;
+}
+
+.img-cover-special{
+  width: 100%;
+  height: 100%;
+  object-fit:contain;
 }
 
 .section-subtitle{
@@ -764,6 +772,18 @@ body.nav-active {
   margin-block-end: 60px;
 }
 
+.logo-text{
+  font-size: var(--fontSize-body-1);
+}
+
+.header .logo{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: var(--letterSpacing-1);
+  /* text-transform: uppercase; */
+}
+
 .navbar-list {
   border-block-end: 1px solid var(--white-alpha-20);
   margin-block-end: 100px;
@@ -1060,6 +1080,10 @@ body.nav-active {
   #ABOUT
 \*-----------------------------------*/
 
+.about{
+  background-color: var(--smoky-black-3);
+}
+
 .about .section-text{
   margin-block: 15px 30px;
 }
@@ -1070,8 +1094,10 @@ body.nav-active {
 }
 
 .about .container{
-  display: grid;
+  display: flex;
   gap: 120px;
+  align-items: center;
+  justify-content: center;
 }
 
 .about-banner{
@@ -1127,6 +1153,7 @@ body.nav-active {
 /*-----------------------------------*\
   #SPECIAL DISH
 \*-----------------------------------*/
+
 .special-dish-content{
   padding-block: 70px;
 }
@@ -1799,6 +1826,7 @@ textarea.input-field{
     height: 45px;
     place-items: center;
     top: 50%;
+    border-radius: 50%;
     transform: translateY(-50%) rotate(45deg);
     transition: var(--transition-1);
   }
